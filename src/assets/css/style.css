@@ -1,0 +1,157 @@
+@import url(global.css);
+@import url(normalize.css);
+
+
+body {
+  background-color: #FAFAFA;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li { 
+  list-style-type: none;
+}
+
+.tabs {
+  position: relative;
+}
+
+.tabs__list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.tabs__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+
+.tabs__btn {
+  padding: 15px 62px;
+  background: #5D71DD;
+  border: none;
+  border-radius: 4px 20px 0px 0px;
+  font-family: 'Noto Sans';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.tabs__btn:hover {
+  background: #FFFFFF;
+  color: #5D71DD;
+}
+
+.tabs__btn--active {
+  background: #FFFFFF;
+  color: #5D71DD;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.tabs__content {
+  background-color: #fff;
+  display: none;
+}
+
+.tabs__content--active {
+  display: block;
+}
+.content {
+  padding: 40px 60px;
+  width: 796px;
+}
+
+.content__title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #4D4D4D;
+  margin-bottom: 20px;
+}
+
+.content__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4D4D4D;
+  margin-bottom: 60px;
+}
+
+.content__list {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.content__link {
+  display: inline-block;
+  width: 200px;
+  height: 120px;
+  background: #EBECF3;
+  border-radius: 4px;
+  padding: 14px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.content__text {
+  font-family: 'Roboto', sans-sefir;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #A2A6C0;
+}
+
+.tabs__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: none;
+  background: #5D71DD;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out
+}
+
+.tabs__arrow svg {
+  pointer-events: none;
+  fill: white;
+  transition: fill 0.3 ease-in-out;
+}
+
+.tabs__arrow:hover {
+  background-color: #fff;
+}
+
+.tabs__arrow:hover svg {
+  fill: #5D71DD;
+}
+
+.tabs__arrow--prev {
+  left: -204px;
+}
+
+.tabs__arrow--next {
+  right: -204px;
+}
